@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://ci1gklndkmihi"]
+
+[ext_resource type="FontFile" uid="uid://dlbvcnge21gxi" path="res://jueguito/assets/minecraft_font_original.ttf" id="1_3dw5x"]
+[ext_resource type="Script" uid="uid://dlu27etyxwixp" path="res://jueguito/scenes/rebirth_button.gd" id="2_1j13l"]
+
+[node name="Rebirth Main UI" type="Control" unique_id=1312286041]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="." unique_id=1927882054]
+layout_mode = 0
+offset_left = -40.0
+offset_top = -15.0
+offset_right = 40.0
+offset_bottom = 13.0
+theme_override_fonts/font = ExtResource("1_3dw5x")
+theme_override_font_sizes/font_size = 10
+text = "Next Rebirth: 100 Bounces"
+script = ExtResource("2_1j13l")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=239301870]
+
+[node name="Label" type="Label" parent="Sprite2D" unique_id=1270726134]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

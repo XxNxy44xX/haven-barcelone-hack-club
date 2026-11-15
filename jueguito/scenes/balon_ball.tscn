@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://bpcyt3ob5ye3g"]
+
+[ext_resource type="Texture2D" uid="uid://drfkdt8wemkyv" path="res://jueguito/assets/sprites/pelotabotabota-Photoroom.png" id="1_o2jxx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2jxx"]
+atlas = ExtResource("1_o2jxx")
+region = Rect2(0, 0, 31, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psgb4"]
+atlas = ExtResource("1_o2jxx")
+region = Rect2(31, 0, 31, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_im51v"]
+atlas = ExtResource("1_o2jxx")
+region = Rect2(62, 0, 31, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dl3m3"]
+atlas = ExtResource("1_o2jxx")
+region = Rect2(93, 0, 31, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ebyd2"]
+atlas = ExtResource("1_o2jxx")
+region = Rect2(124, 0, 31, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n868e"]
+atlas = ExtResource("1_o2jxx")
+region = Rect2(155, 0, 31, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dk7j"]
+atlas = ExtResource("1_o2jxx")
+region = Rect2(186, 0, 31, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8tmp"]
+atlas = ExtResource("1_o2jxx")
+region = Rect2(217, 0, 31, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_73vj5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o2jxx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_psgb4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_im51v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dl3m3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ebyd2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n868e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0dk7j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n8tmp")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 8.0
+}]
+
+[node name="BalonBall" type="CharacterBody2D" unique_id=1747389032]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=584833218]
+position = Vector2(0, -37)
+sprite_frames = SubResource("SpriteFrames_73vj5")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.6960415

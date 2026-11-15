@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bxu6a8ti2k8ky"]
+
+[ext_resource type="FontFile" uid="uid://dlbvcnge21gxi" path="res://jueguito/assets/minecraft_font_original.ttf" id="1_civid"]
+[ext_resource type="Script" uid="uid://rres4wj5hcy0" path="res://jueguito/scripts/boton_bounce.gd" id="1_gbbtd"]
+
+[node name="Upgrade Bounce" type="Control" unique_id=873672672]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="." unique_id=1396896636]
+layout_mode = 0
+offset_right = 28.0
+offset_bottom = 8.0
+theme_override_fonts/font = ExtResource("1_civid")
+theme_override_font_sizes/font_size = 10
+text = "Botón"
+script = ExtResource("1_gbbtd")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

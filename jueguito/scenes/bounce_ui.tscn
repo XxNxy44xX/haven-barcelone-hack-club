@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cj78hjput4r4"]
+
+[ext_resource type="Script" uid="uid://bb0x0ayr8xtk6" path="res://bounce_label.gd" id="1_3eum1"]
+[ext_resource type="FontFile" uid="uid://dlbvcnge21gxi" path="res://jueguito/assets/minecraft_font_original.ttf" id="1_wd1bb"]
+[ext_resource type="Texture2D" uid="uid://drfkdt8wemkyv" path="res://jueguito/assets/sprites/pelotabotabota-Photoroom.png" id="2_wd1bb"]
+
+[node name="Bounce UI" type="Control" unique_id=1009053849]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Bounce Count text" type="Label" parent="." unique_id=686529008]
+layout_mode = 0
+offset_left = 5.0
+offset_top = -5.0
+offset_right = 103.0
+offset_bottom = 18.0
+theme_override_fonts/font = ExtResource("1_wd1bb")
+theme_override_font_sizes/font_size = 8
+text = "BOUNCES: 0"
+script = ExtResource("1_3eum1")
+
+[node name="Bounce Counter Sprite" type="Sprite2D" parent="." unique_id=545064463]
+position = Vector2(-1.9073486e-06, 1.9073486e-06)
+scale = Vector2(0.33333334, 0.33333334)
+texture = ExtResource("2_wd1bb")
+region_enabled = true
+region_rect = Rect2(0, 0, 30.762129, 30.642221)

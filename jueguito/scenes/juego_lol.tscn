@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://cl0cpixp7hnup"]
+
+[ext_resource type="Script" uid="uid://fdinwbm46k8e" path="res://jueguito/scenes/Global.gd" id="1_bel5q"]
+[ext_resource type="Texture2D" uid="uid://gcbp7y3b5wbj" path="res://jueguito/assets/sprites/volleyball court.jpg" id="2_ffpgv"]
+[ext_resource type="PackedScene" uid="uid://cj78hjput4r4" path="res://jueguito/scenes/bounce_ui.tscn" id="2_ycebr"]
+[ext_resource type="PackedScene" uid="uid://ci1gklndkmihi" path="res://jueguito/scenes/rebirth_main_ui.tscn" id="3_ycebr"]
+[ext_resource type="PackedScene" uid="uid://cuakqrr34oa6j" path="res://jueguito/scenes/ballball.tscn" id="4_m3jmj"]
+[ext_resource type="PackedScene" uid="uid://bxu6a8ti2k8ky" path="res://jueguito/scenes/upgrade_bounce.tscn" id="4_ycebr"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kwaqu"]
+distance = -6.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_i7lql"]
+normal = Vector2(0, 1)
+
+[node name="Juego lol" type="Node2D" unique_id=574914094]
+script = ExtResource("1_bel5q")
+
+[node name="Bounce UI" parent="." unique_id=1009053849 instance=ExtResource("2_ycebr")]
+offset_left = -184.0
+offset_top = -158.0
+offset_right = -144.0
+offset_bottom = -158.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Rebirth Main UI" parent="." unique_id=1312286041 instance=ExtResource("3_ycebr")]
+offset_left = -153.0
+offset_top = 32.0
+offset_right = -113.0
+offset_bottom = 72.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Upgrade Bounce" parent="." unique_id=873672672 instance=ExtResource("4_ycebr")]
+offset_left = -193.0
+offset_top = -26.0
+offset_right = -153.0
+offset_bottom = 14.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=398667228]
+position = Vector2(2, -58)
+zoom = Vector2(4, 4)
+
+[node name="BallBall" parent="." unique_id=1377401091 instance=ExtResource("4_m3jmj")]
+position = Vector2(1, -9)
+
+[node name="Worldbuild" type="Node2D" parent="." unique_id=86574158]
+
+[node name="Background" type="Sprite2D" parent="Worldbuild" unique_id=1076999730]
+z_index = -4096
+position = Vector2(1.5000114, -116.000015)
+scale = Vector2(0.675, 0.56371814)
+texture = ExtResource("2_ffpgv")
+
+[node name="Area2D" type="Area2D" parent="Worldbuild" unique_id=202913098 groups=["Suelo"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Worldbuild/Area2D" unique_id=566298508 groups=["Suelo"]]
+position = Vector2(0, -4)
+shape = SubResource("WorldBoundaryShape2D_kwaqu")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Worldbuild" unique_id=658893655]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Worldbuild/StaticBody2D" unique_id=1121421533]
+position = Vector2(0, -4)
+shape = SubResource("WorldBoundaryShape2D_kwaqu")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Worldbuild" unique_id=477077877]
+position = Vector2(0, -171)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Worldbuild/StaticBody2D2" unique_id=1825579270]
+shape = SubResource("WorldBoundaryShape2D_i7lql")
